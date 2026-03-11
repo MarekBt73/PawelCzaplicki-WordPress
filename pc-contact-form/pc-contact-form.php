@@ -235,7 +235,7 @@ final class PC_Contact_Form {
 
 				<div class="pc-contact-form__row">
 					<button class="pc-contact-form__btn" type="submit">
-						<?php echo esc_html__( 'Proszę o kontakt', 'pc-contact-form' ); ?>
+						<?php echo esc_html__( 'Wyślij wiadomość', 'pc-contact-form' ); ?>
 					</button>
 				</div>
 			</form>
