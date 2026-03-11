@@ -1,0 +1,78 @@
+/**
+ * Strona główna – Protokół 17:00™
+ * Style uzupełniające do Tailwind CDN (font-semi-expanded, glass, FAQ, tło).
+ */
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Mona Sans', sans-serif;
+	font-variation-settings: "wdth" 100;
+}
+
+.font-semi-expanded {
+	font-variation-settings: "wdth" 115;
+}
+
+.glass-header {
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+@media (min-width: 1024px) {
+	.lg\:text-\[4rem\] {
+		font-size: 3rem;
+	}
+}
+
+h1.text-4xl {
+	font-size: 41px;
+	line-height: 46px;
+	letter-spacing: -1.6px;
+}
+
+.bg-lines-container {
+	position: absolute;
+	inset: 0;
+	overflow: hidden;
+	z-index: -1;
+	pointer-events: none;
+}
+
+.faq-answer {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease-out;
+	opacity: 0;
+}
+
+.faq-answer.open {
+	opacity: 1;
+}
+
+.cta-arrow-link:hover .arrow-icon {
+	transform: translateX(6px);
+}
+
+/* Gdy widoczny jest pasek admina WordPressa – przesuń menu w dół, żeby nie było zasłaniane */
+body.admin-bar #main-header {
+	top: 32px;
+}
+@media screen and (max-width: 782px) {
+	body.admin-bar #main-header {
+		top: 46px;
+	}
+}
+
+/* Menu mobilne (burgery) – ukryte na desktop, widoczne gdy brak .md:flex */
+@media (max-width: 767px) {
+	.p17-nav-desktop {
+		display: none !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.p17-nav-mobile {
+		display: none !important;
+	}
+}
