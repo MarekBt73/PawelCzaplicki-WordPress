@@ -15,6 +15,8 @@ Panel WP → Ustawienia → **PC Contact Form**
 
 - **E-mail administratora**: adres, na który mają przychodzić zgłoszenia
 - **Link do polityki (RODO)**: opcjonalny URL wyświetlany przy zgodzie
+- **E-mail nadawcy (From)**: adres używany w nagłówku From dla maili z formularza
+- **Podpis nadawcy (stopka)**: podpis dodawany w potwierdzeniu dla nadawcy
 
 ## Użycie
 

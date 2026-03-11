@@ -2,7 +2,7 @@
 /**
  * Plugin Name: PC Contact Form
  * Description: Bezpieczny formularz kontaktowy (shortcode) bez zapisu w bazie. Wysyła wiadomość do administratora i potwierdzenie do nadawcy.
- * Version: 0.1.1
+ * Version: 0.1.2
  * Author: marekbecht.pl
  * License: GPL-2.0-or-later
  */
@@ -37,7 +37,7 @@ final class PC_Contact_Form {
 			'pc-contact-form',
 			plugins_url( 'assets/contact-form.css', __FILE__ ),
 			array(),
-			'0.1.1'
+			'0.1.2'
 		);
 	}
 
@@ -86,6 +86,22 @@ final class PC_Contact_Form {
 			'pc_contact_form',
 			'pc_contact_form_main'
 		);
+
+		add_settings_field(
+			'from_email',
+			__( 'E-mail nadawcy (From)', 'pc-contact-form' ),
+			array( __CLASS__, 'render_field_from_email' ),
+			'pc_contact_form',
+			'pc_contact_form_main'
+		);
+
+		add_settings_field(
+			'sender_signature',
+			__( 'Podpis nadawcy (stopka)', 'pc-contact-form' ),
+			array( __CLASS__, 'render_field_sender_signature' ),
+			'pc_contact_form',
+			'pc_contact_form_main'
+		);
 	}
 
 	public static function sanitize_options( $value ): array {
@@ -93,6 +109,8 @@ final class PC_Contact_Form {
 
 		$admin_email = isset( $value['admin_email'] ) ? (string) $value['admin_email'] : '';
 		$policy_url  = isset( $value['policy_url'] ) ? (string) $value['policy_url'] : '';
+		$from_email  = isset( $value['from_email'] ) ? (string) $value['from_email'] : '';
+		$sender_signature = isset( $value['sender_signature'] ) ? (string) $value['sender_signature'] : '';
 
 		$admin_email = sanitize_email( $admin_email );
 		if ( $admin_email === '' ) {
@@ -101,9 +119,21 @@ final class PC_Contact_Form {
 
 		$policy_url = esc_url_raw( $policy_url );
 
+		$from_email = sanitize_email( $from_email );
+		if ( $from_email === '' ) {
+			$from_email = $admin_email;
+		}
+
+		$sender_signature = sanitize_textarea_field( $sender_signature );
+		if ( trim( $sender_signature ) === '' ) {
+			$sender_signature = (string) get_bloginfo( 'name' );
+		}
+
 		return array(
 			'admin_email' => $admin_email,
 			'policy_url'  => $policy_url,
+			'from_email'  => $from_email,
+			'sender_signature' => $sender_signature,
 		);
 	}
 
@@ -126,6 +156,25 @@ final class PC_Contact_Form {
 		?>
 		<input type="url" class="regular-text" name="<?php echo esc_attr( self::OPTION_KEY ); ?>[policy_url]" value="<?php echo esc_attr( $policy_url ); ?>" placeholder="https://…">
 		<p class="description"><?php echo esc_html__( 'Jeśli puste, link w formularzu nie będzie wyświetlany.', 'pc-contact-form' ); ?></p>
+		<?php
+	}
+
+	public static function render_field_from_email(): void {
+		$options   = self::get_options();
+		$admin_email = isset( $options['admin_email'] ) && is_string( $options['admin_email'] ) ? $options['admin_email'] : (string) get_option( 'admin_email' );
+		$from_email  = isset( $options['from_email'] ) && is_string( $options['from_email'] ) ? $options['from_email'] : $admin_email;
+		?>
+		<input type="email" class="regular-text" name="<?php echo esc_attr( self::OPTION_KEY ); ?>[from_email]" value="<?php echo esc_attr( $from_email ); ?>">
+		<p class="description"><?php echo esc_html__( 'Adres używany w nagłówku From dla e-maili wysyłanych przez formularz.', 'pc-contact-form' ); ?></p>
+		<?php
+	}
+
+	public static function render_field_sender_signature(): void {
+		$options   = self::get_options();
+		$signature = isset( $options['sender_signature'] ) && is_string( $options['sender_signature'] ) ? $options['sender_signature'] : (string) get_bloginfo( 'name' );
+		?>
+		<textarea class="large-text" rows="4" name="<?php echo esc_attr( self::OPTION_KEY ); ?>[sender_signature]"><?php echo esc_textarea( $signature ); ?></textarea>
+		<p class="description"><?php echo esc_html__( 'Podpis dodawany w potwierdzeniu do nadawcy (np. imię/nazwa firmy).', 'pc-contact-form' ); ?></p>
 		<?php
 	}
 
@@ -290,6 +339,14 @@ final class PC_Contact_Form {
 
 		$options = self::get_options();
 		$admin_email = isset( $options['admin_email'] ) && is_email( $options['admin_email'] ) ? (string) $options['admin_email'] : (string) get_option( 'admin_email' );
+		$from_email  = isset( $options['from_email'] ) && is_email( $options['from_email'] ) ? (string) $options['from_email'] : $admin_email;
+		$signature   = isset( $options['sender_signature'] ) && is_string( $options['sender_signature'] ) ? trim( (string) $options['sender_signature'] ) : '';
+		if ( $signature === '' ) {
+			$signature = (string) get_bloginfo( 'name' );
+		}
+
+		$site_name = (string) wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES );
+		$site_url  = (string) home_url( '/' );
 
 		$subject_admin = sprintf(
 			/* translators: %s: sender name */
@@ -314,6 +371,7 @@ final class PC_Contact_Form {
 
 		$headers_admin = array(
 			'Content-Type: text/plain; charset=UTF-8',
+			'From: ' . $site_name . ' <' . $from_email . '>',
 			'Reply-To: ' . $name . ' <' . $email . '>',
 		);
 
@@ -325,9 +383,17 @@ final class PC_Contact_Form {
 			array(
 				'Dziękuję za kontakt.',
 				'Otrzymaliśmy Twoją wiadomość i wrócimy z odpowiedzią.',
+				'',
+				'Wiadomość od: ' . $site_name,
+				$site_url,
+				'',
+				$signature,
 			)
 		);
-		$headers_user = array( 'Content-Type: text/plain; charset=UTF-8' );
+		$headers_user = array(
+			'Content-Type: text/plain; charset=UTF-8',
+			'From: ' . $site_name . ' <' . $from_email . '>',
+		);
 		$sent_user = wp_mail( $email, $subject_user, $body_user, $headers_user );
 
 		if ( $sent_admin && $sent_user ) {
