@@ -218,6 +218,28 @@ final class PC_Contact_Form {
 		?>
 		<div class="pc-contact-form">
 			<?php if ( $success ) : ?>
+				<div class="pc-contact-form__modal" role="dialog" aria-modal="true" aria-label="<?php esc_attr_e( 'Wiadomość wysłana', 'pc-contact-form' ); ?>">
+					<div class="pc-contact-form__modal-card">
+						<div class="pc-contact-form__modal-title"><?php echo esc_html__( 'Wiadomość wysłana', 'pc-contact-form' ); ?></div>
+						<div class="pc-contact-form__modal-text"><?php echo esc_html__( 'Dziękuję. Otrzymałem wiadomość i niedługo się z Tobą skontaktuję.', 'pc-contact-form' ); ?></div>
+						<button type="button" class="pc-contact-form__modal-close"><?php echo esc_html__( 'OK', 'pc-contact-form' ); ?></button>
+					</div>
+				</div>
+				<script>
+					(function () {
+						var modal = document.querySelector('.pc-contact-form__modal');
+						if (!modal) return;
+						var closeBtn = modal.querySelector('.pc-contact-form__modal-close');
+						function close() { modal.remove(); }
+						if (closeBtn) closeBtn.addEventListener('click', close);
+						modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
+						document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); }, { once: true });
+						setTimeout(close, 6000);
+					})();
+				</script>
+			<?php endif; ?>
+
+			<?php if ( $success ) : ?>
 				<div class="pc-contact-form__notice pc-contact-form__notice--success">
 					<?php echo esc_html__( 'Dziękuję. Wiadomość została wysłana.', 'pc-contact-form' ); ?>
 				</div>
@@ -382,7 +404,7 @@ final class PC_Contact_Form {
 			"\n",
 			array(
 				'Dziękuję za kontakt.',
-				'Otrzymaliśmy Twoją wiadomość i wrócimy z odpowiedzią.',
+				'Otrzymałem wiadomość i niedługo się z Tobą skontaktuję.',
 				'',
 				'Wiadomość od: ' . $site_name,
 				$site_url,
