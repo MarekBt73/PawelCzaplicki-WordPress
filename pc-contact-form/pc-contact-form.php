@@ -2,7 +2,7 @@
 /**
  * Plugin Name: PC Contact Form
  * Description: Bezpieczny formularz kontaktowy (shortcode) bez zapisu w bazie. Wysyła wiadomość do administratora i potwierdzenie do nadawcy.
- * Version: 0.1.2
+ * Version: 0.1.3
  * Author: marekbecht.pl
  * License: GPL-2.0-or-later
  */
@@ -37,7 +37,7 @@ final class PC_Contact_Form {
 			'pc-contact-form',
 			plugins_url( 'assets/contact-form.css', __FILE__ ),
 			array(),
-			'0.1.2'
+			'0.1.3'
 		);
 	}
 
@@ -121,7 +121,7 @@ final class PC_Contact_Form {
 
 		$from_email = sanitize_email( $from_email );
 		if ( $from_email === '' ) {
-			$from_email = $admin_email;
+			$from_email = self::default_from_email();
 		}
 
 		$sender_signature = sanitize_textarea_field( $sender_signature );
@@ -135,6 +135,18 @@ final class PC_Contact_Form {
 			'from_email'  => $from_email,
 			'sender_signature' => $sender_signature,
 		);
+	}
+
+	private static function default_from_email(): string {
+		$host = wp_parse_url( (string) home_url( '/' ), PHP_URL_HOST );
+		$host = is_string( $host ) ? strtolower( $host ) : '';
+		$host = preg_replace( '/^www\./', '', $host );
+
+		if ( $host === '' ) {
+			return (string) get_option( 'admin_email' );
+		}
+
+		return 'noreply@' . $host;
 	}
 
 	private static function get_options(): array {
@@ -161,11 +173,12 @@ final class PC_Contact_Form {
 
 	public static function render_field_from_email(): void {
 		$options   = self::get_options();
-		$admin_email = isset( $options['admin_email'] ) && is_string( $options['admin_email'] ) ? $options['admin_email'] : (string) get_option( 'admin_email' );
-		$from_email  = isset( $options['from_email'] ) && is_string( $options['from_email'] ) ? $options['from_email'] : $admin_email;
+		$from_email  = isset( $options['from_email'] ) && is_string( $options['from_email'] ) ? $options['from_email'] : self::default_from_email();
 		?>
 		<input type="email" class="regular-text" name="<?php echo esc_attr( self::OPTION_KEY ); ?>[from_email]" value="<?php echo esc_attr( $from_email ); ?>">
-		<p class="description"><?php echo esc_html__( 'Adres używany w nagłówku From dla e-maili wysyłanych przez formularz.', 'pc-contact-form' ); ?></p>
+		<p class="description">
+			<?php echo esc_html__( 'Adres używany w nagłówku From. Rekomendowane: adres w domenie strony (np. noreply@twojadomena.pl). Ustawienie Gmaila w polu From bywa odrzucane przez filtry (DMARC).', 'pc-contact-form' ); ?>
+		</p>
 		<?php
 	}
 
@@ -361,7 +374,7 @@ final class PC_Contact_Form {
 
 		$options = self::get_options();
 		$admin_email = isset( $options['admin_email'] ) && is_email( $options['admin_email'] ) ? (string) $options['admin_email'] : (string) get_option( 'admin_email' );
-		$from_email  = isset( $options['from_email'] ) && is_email( $options['from_email'] ) ? (string) $options['from_email'] : $admin_email;
+		$from_email  = isset( $options['from_email'] ) && is_email( $options['from_email'] ) ? (string) $options['from_email'] : self::default_from_email();
 		$signature   = isset( $options['sender_signature'] ) && is_string( $options['sender_signature'] ) ? trim( (string) $options['sender_signature'] ) : '';
 		if ( $signature === '' ) {
 			$signature = (string) get_bloginfo( 'name' );
