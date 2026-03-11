@@ -3,7 +3,7 @@
  * Plugin Name: PC Contact Form
  * Description: Bezpieczny formularz kontaktowy (shortcode) bez zapisu w bazie. Wysyła wiadomość do administratora i potwierdzenie do nadawcy.
  * Version: 0.1.1
- * Author: PawelCzaplicki.com
+ * Author: marekbecht.pl
  * License: GPL-2.0-or-later
  */
 
