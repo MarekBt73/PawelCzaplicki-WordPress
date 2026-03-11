@@ -33,7 +33,7 @@ get_header();
 		</div>
 
 		<div class="flex flex-wrap gap-3 mb-4">
-			<a href="#test" class="inline-flex items-center justify-center rounded-md border border-slate-900 bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800">
+			<a href="<?php echo esc_url( home_url( '/ankieta/' ) ); ?>" class="inline-flex items-center justify-center rounded-md border border-slate-900 bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800">
 				Zrób szybki test — bezpłatnie
 			</a>
 			<a href="#rozmowa" class="inline-flex items-center justify-center rounded-md border border-slate-900 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-900 hover:text-white">
