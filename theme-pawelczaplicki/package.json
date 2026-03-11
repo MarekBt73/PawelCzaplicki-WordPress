@@ -1,0 +1,14 @@
+{
+  "name": "theme-pawelczaplicki",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Motyw WordPress dla pawelczaplicki.com z Tailwind CSS budowanym po stronie serwera.",
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --minify",
+    "dev:css": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  }
+}
+
