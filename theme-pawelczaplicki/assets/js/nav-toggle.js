@@ -1,27 +1,27 @@
 (() => {
-  const toggle = document.querySelector<HTMLButtonElement>(".pc-nav-toggle");
-  const nav = document.querySelector<HTMLElement>(".pc-nav");
+  var toggle = document.querySelector(".pc-nav-toggle");
+  var nav = document.querySelector(".pc-nav");
   if (!toggle || !nav) return;
 
-  const close = () => {
+  function close() {
     nav.classList.remove("pc-nav--open");
     document.body.classList.remove("pc-nav-open");
     toggle.setAttribute("aria-expanded", "false");
-  };
+  }
 
-  toggle.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("pc-nav--open");
+  toggle.addEventListener("click", function () {
+    var isOpen = nav.classList.toggle("pc-nav--open");
     document.body.classList.toggle("pc-nav-open", isOpen);
     toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
   });
 
-  window.addEventListener("resize", () => {
+  window.addEventListener("resize", function () {
     if (window.innerWidth > 900) {
       close();
     }
   });
 
-  document.addEventListener("keydown", (event) => {
+  document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
       close();
     }
