@@ -21,24 +21,22 @@ get_header();
 					<h1 class="pc-hero-title"><?php the_title(); ?></h1>
 				</header>
 
-				<div class="pc-contact-page__grid">
-					<div class="pc-contact-page__content">
-						<?php the_content(); ?>
-					</div>
-
-					<aside class="pc-contact-page__aside" aria-label="<?php esc_attr_e( 'Dane kontaktowe', 'pawelczaplicki' ); ?>">
-						<?php if ( is_active_sidebar( 'pawelczaplicki-contact-widgets' ) ) : ?>
-							<?php dynamic_sidebar( 'pawelczaplicki-contact-widgets' ); ?>
-						<?php else : ?>
-							<section class="pc-widget">
-								<h3 class="pc-widget-title"><?php esc_html_e( 'Kontakt', 'pawelczaplicki' ); ?></h3>
-								<p class="pc-widget-text">
-									<?php esc_html_e( 'Dodaj widgety w: Wygląd → Widgety → Kontakt – widgety.', 'pawelczaplicki' ); ?>
-								</p>
-							</section>
-						<?php endif; ?>
-					</aside>
+				<div class="pc-contact-page__content">
+					<?php the_content(); ?>
 				</div>
+
+				<section class="pc-contact-page__widgets" aria-label="<?php esc_attr_e( 'Dane kontaktowe', 'pawelczaplicki' ); ?>">
+					<?php if ( is_active_sidebar( 'pawelczaplicki-contact-widgets' ) ) : ?>
+						<?php dynamic_sidebar( 'pawelczaplicki-contact-widgets' ); ?>
+					<?php else : ?>
+						<section class="pc-widget">
+							<h3 class="pc-widget-title"><?php esc_html_e( 'Kontakt', 'pawelczaplicki' ); ?></h3>
+							<p class="pc-widget-text">
+								<?php esc_html_e( 'Dodaj widgety w: Wygląd → Widgety → Kontakt – widgety.', 'pawelczaplicki' ); ?>
+							</p>
+						</section>
+					<?php endif; ?>
+				</section>
 			</article>
 			<?php
 		endwhile;

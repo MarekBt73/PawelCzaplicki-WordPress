@@ -437,16 +437,12 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
-.pc-contact-page__grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
-  gap: 2rem;
-  align-items: start;
+.pc-contact-page__content {
+  max-width: 70ch;
 }
 
-.pc-contact-page__aside {
-  position: sticky;
-  top: 1.25rem;
+.pc-contact-page__widgets {
+  margin-top: 2rem;
 }
 
 .pc-widget {
@@ -469,16 +465,6 @@ a:hover {
 .pc-widget-text {
   margin: 0;
   color: rgba(15, 23, 42, 0.78);
-}
-
-@media (max-width: 900px) {
-  .pc-contact-page__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pc-contact-page__aside {
-    position: static;
-  }
 }
 
 .pc-contact-label {
