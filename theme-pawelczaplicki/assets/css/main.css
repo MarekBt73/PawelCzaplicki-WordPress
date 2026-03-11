@@ -42,6 +42,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .pc-logo {
@@ -49,6 +50,44 @@ a:hover {
   font-weight: 600;
   letter-spacing: 0.04em;
   font-size: 2rem;
+}
+
+.pc-nav-toggle {
+  display: none;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.pc-nav-toggle span {
+  display: block;
+  width: 1.1rem;
+  height: 2px;
+  border-radius: 999px;
+  background: #111827;
+  position: relative;
+}
+
+.pc-nav-toggle span + span {
+  margin-top: 0.25rem;
+}
+
+.pc-nav {
+  font-size: 0.95rem;
+}
+
+.pc-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
 }
 
 .pc-main {
@@ -507,18 +546,35 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .pc-header {
+  .pc-nav-toggle {
+    display: inline-flex;
+  }
+
+  .pc-nav {
+    position: absolute;
+    inset-inline: 1.5rem;
+    top: 100%;
+    margin-top: 0.75rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    background: #fff;
+    box-shadow: 0 22px 45px rgba(15, 23, 42, 0.12);
+    padding: 0.75rem 0.85rem;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 200ms ease, transform 200ms ease;
+  }
+
+  .pc-nav-list {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
+    gap: 0.35rem;
   }
 
-  .pc-hero {
-    padding-block: 3rem 2.5rem;
-  }
-
-  .pc-hero-line1 {
-    white-space: normal;
+  .pc-nav.pc-nav--open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 }
 

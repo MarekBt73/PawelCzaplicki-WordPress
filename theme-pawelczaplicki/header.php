@@ -16,6 +16,10 @@ declare(strict_types=1);
 			Czaplicki<span style="color:var(--pc-accent)">’</span>
 		</a>
 	</div>
+	<button type="button" class="pc-nav-toggle" aria-label="<?php esc_attr_e( 'Przełącz menu', 'pawelczaplicki' ); ?>" aria-expanded="false">
+		<span></span>
+		<span></span>
+	</button>
 	<nav class="pc-nav" aria-label="<?php esc_attr_e( 'Główne menu', 'pawelczaplicki' ); ?>">
 		<?php
 		wp_nav_menu(

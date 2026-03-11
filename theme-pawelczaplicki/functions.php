@@ -59,6 +59,14 @@ add_action(
 			$theme_version,
 			true
 		);
+
+		wp_enqueue_script(
+			'pawelczaplicki-nav-toggle',
+			get_template_directory_uri() . '/assets/js/nav-toggle.js',
+			array(),
+			$theme_version,
+			true
+		);
 	}
 );
 
