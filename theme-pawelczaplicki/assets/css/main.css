@@ -556,9 +556,9 @@ a:hover {
     top: 100%;
     margin-top: 0.75rem;
     border-radius: 1rem;
-    border: 1px solid rgba(15, 23, 42, 0.12);
-    background: #fff;
-    box-shadow: 0 22px 45px rgba(15, 23, 42, 0.12);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    background: rgba(248, 246, 244, 0.96); /* zbliżone do var(--pc-bg) z lekką przezroczystością */
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08);
     padding: 0.75rem 0.85rem;
     opacity: 0;
     transform: translateY(-8px);
