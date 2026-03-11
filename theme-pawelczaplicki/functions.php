@@ -51,6 +51,31 @@ add_action(
 			array( 'pawelczaplicki-tailwind', 'pawelczaplicki-fonts' ),
 			$theme_version
 		);
+
+		wp_enqueue_script(
+			'pawelczaplicki-scroll-reveal',
+			get_template_directory_uri() . '/assets/js/scroll-reveal.js',
+			array(),
+			$theme_version,
+			true
+		);
+	}
+);
+
+add_action(
+	'widgets_init',
+	static function (): void {
+		register_sidebar(
+			array(
+				'name'          => __( 'Kontakt – widgety', 'pawelczaplicki' ),
+				'id'            => 'pawelczaplicki-contact-widgets',
+				'description'   => __( 'Widgety wyświetlane w dedykowanym szablonie strony Kontakt.', 'pawelczaplicki' ),
+				'before_widget' => '<section class="pc-widget %2$s" id="%1$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h3 class="pc-widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
 	}
 );
 

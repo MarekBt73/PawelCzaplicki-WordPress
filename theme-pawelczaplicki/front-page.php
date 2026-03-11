@@ -2,175 +2,175 @@
 
 get_header(); ?>
 
-<section class="py-24 border-b border-slate-200">
-	<div class="mx-auto max-w-content px-6">
-		<h1 class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500 mb-5">
-			Strategia, komunikacja, rozwój biznesu
-		</h1>
-		<p class="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold leading-tight tracking-[-0.04em] text-slate-900 mb-6">
-			Doradztwo strategiczne dla właścicieli firm<br>
-			<span class="text-[0.9em] font-normal">
-				Reiss Motivation Profile z wdrożeniem Protokołu 17:00™, aby firma działała sprawnie bez ciągłego nadzoru właściciela.
-			</span>
-		</p>
-		<p class="text-lg text-slate-600 mb-8 max-w-3xl">
-			Jestem Paweł Czaplicki. Pracuję z właścicielami firm, zarządami i ekspertami, którzy mają świetne produkty,
-			ale potrzebują klarownej historii, spójnej oferty i decyzji zamiast kolejnych „przemyślimy to”.
-		</p>
-
-		<div class="flex flex-wrap gap-3 mb-4">
-			<a href="#kontakt" class="inline-flex items-center justify-center rounded-md border border-slate-900 bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800">
-				Umów rozmowę strategiczną
-			</a>
-			<a href="#jak-pomagam" class="inline-flex items-center justify-center rounded-md border border-slate-900 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-900 hover:text-white">
-				Zobacz, w czym mogę pomóc
-			</a>
-		</div>
-
-		<p class="text-xs text-slate-500 mt-2 max-w-md">
-			Ta strona jest moją wersją „strony przechwałek”. Znajdziesz tu konkrety, które pokażą,
-			czy jestem właściwą osobą do Twojego projektu.
-		</p>
-	</div>
-</section>
-
-<section class="py-16 border-t border-slate-200" aria-label="Kluczowe liczby i doświadczenie">
-	<div class="mx-auto max-w-content px-6">
-		<h2 class="text-2xl sm:text-3xl font-bold tracking-[-0.03em] text-slate-900 mb-5">
-			Kilka liczb, które najlepiej podsumowują moją pracę
-		</h2>
-		<p class="text-slate-600 mb-8 max-w-2xl">
-			Liczby nie opowiadają całej historii, ale dobrze pokazują skalę i konsekwencję.
-		</p>
-
-		<div class="grid gap-8 sm:grid-cols-3">
-			<div>
-				<p class="text-3xl font-extrabold text-slate-900 mb-1">2005</p>
-				<p class="text-sm text-slate-600 mb-0">
-					rok, od którego wspieram firmy w decyzjach strategicznych
-				</p>
+<section class="pc-snap-section pc-snap-section--hero pc-reveal" aria-label="Hero">
+	<div class="pc-snap-inner">
+		<div class="pc-snap-content">
+			<p class="pc-kicker">Przestań być wąskim gardłem własnego biznesu.</p>
+			<h1 class="pc-h1">
+				Podejmuj kluczowe decyzje z pewnością drapieżnika.
+			</h1>
+			<p class="pc-lead">
+				Nazywam się Paweł Czaplicki. Pomagam founderom i właścicielom firm zbudować autonomiczne zespoły. Łączę twardą analitykę
+				<strong>Reiss Motivation Profile®</strong> z autorskim <strong>Protokołem 17:00™</strong>, aby Twoja organizacja działała i rosła bez
+				konieczności Twojego ciągłego mikrozarządzania.
+			</p>
+			<div class="pc-cta-row">
+				<a class="pc-btn pc-btn--primary" href="#kwalifikacja">Zobacz, jak uwolnić swój czas i odzyskać firmę</a>
 			</div>
-			<div>
-				<p class="text-3xl font-extrabold text-slate-900 mb-1">2000+</p>
-				<p class="text-sm text-slate-600 mb-0">
-					przeprowadzonych spotkań strategicznych, warsztatów i konsultacji
-				</p>
+			<blockquote class="pc-quote">
+				RMP Master | Twórca Programu Mentoringowego „Instynkt Decyzyjny™”
+			</blockquote>
+		</div>
+	</div>
+</section>
+
+<section class="pc-snap-section pc-snap-section--alt pc-reveal" aria-label="Agitacja problemu">
+	<div class="pc-snap-inner">
+		<div class="pc-snap-content">
+			<h2 class="pc-h2">Zbudowałeś firmę, ale stałeś się jej zakładnikiem?</h2>
+			<p class="pc-lead">
+				Znam ten schemat doskonale. Pracuję z właścicielami firm, którzy osiągnęli sukces finansowy, ale zapłacili za to najwyższą cenę –
+				utratę czasu, przepustowości operacyjnej i swobody.
+			</p>
+			<p class="pc-body">Zazwyczaj trafiają do mnie, gdy widzą u siebie te objawy:</p>
+			<ul class="pc-bullets">
+				<li><strong>Syndrom niezastąpionego:</strong> Każda, nawet najdrobniejsza decyzja, musi ostatecznie przejść przez Twoje biurko. Bez Ciebie procesy stoją w miejscu.</li>
+				<li><strong>Fikcyjne delegowanie:</strong> Przekazujesz zadania, ale i tak musisz stale kontrolować ich wykonanie. Kosztuje Cię to więcej energii, niż zrobienie tego samemu.</li>
+				<li><strong>Blokada wzrostu:</strong> Twój zespół ma potencjał, ale nie przejmuje odpowiedzialności, a Ty fizycznie nie jesteś w stanie pracować więcej godzin w dobie.</li>
+			</ul>
+			<p class="pc-punch">
+				Rozwiązaniem nie jest zatrudnienie kolejnych menedżerów. <strong>Rozwiązaniem jest zmiana architektury decyzyjnej w Twojej firmie.</strong>
+			</p>
+		</div>
+	</div>
+</section>
+
+<section class="pc-snap-section pc-reveal" aria-label="O mnie">
+	<div class="pc-snap-inner">
+		<div class="pc-snap-content">
+			<h2 class="pc-h2">Inżynier procesów decyzyjnych w Twojej firmie.</h2>
+			<p class="pc-body">
+				Nazywam się Paweł Czaplicki. Jestem RMP Masterem i twórcą programu <strong>Instynkt Decyzyjny™</strong>. Przez lata obserwowałem,
+				jak wspaniałe organizacje dławią się własnym sukcesem, ponieważ ich założyciele nie potrafili oddać kontroli.
+			</p>
+			<p class="pc-body">
+				Nie wierzę w miękkie rady coachingowe. W biznesie liczą się systemy, mierzalne dane i przewidywalne procesy. Dlatego stworzyłem
+				<strong>Protokół 17:00™</strong> – twarde, rzemieślnicze narzędzie do wyciągania właścicieli z operacyjnego bagna. Przekładam psychologię
+				motywacji na wskaźniki efektywności zarządczej.
+			</p>
+			<p class="pc-body pc-body--strong">
+				Moja miara sukcesu? Moment, w którym wyjeżdżasz na dwutygodniowy urlop, a po powrocie odkrywasz, że firma wygenerowała zysk bez ani jednego telefonu do Ciebie.
+			</p>
+		</div>
+	</div>
+</section>
+
+<section class="pc-snap-section pc-snap-section--alt pc-reveal" aria-label="Metodologia: RMP">
+	<div class="pc-snap-inner">
+		<div class="pc-snap-content">
+			<h2 class="pc-h2">Diagnostyka RMP. Architektura motywacji zamiast zgadywania.</h2>
+			<p class="pc-body">
+				Większość narzędzi HR-owych (DISC, MBTI) pokazuje <em>jak</em> ktoś się zachowuje. Kiedy stawką jest całkowite oddanie odpowiedzialności,
+				muszę wiedzieć <em>dlaczego</em> Twój pracownik zachowa się w określony sposób, gdy przestaniesz patrzeć mu na ręce.
+			</p>
+			<p class="pc-body">
+				Wykorzystuję <strong>Reiss Motivation Profile® (RMP)</strong> – zwalidowane naukowo badanie 16 uniwersalnych motywatorów życiowych.
+			</p>
+			<p class="pc-body">Co daje RMP w praktyce zarządczej?</p>
+			<ul class="pc-bullets">
+				<li><strong>Algorytm Delegowania:</strong> Wiemy, kto przejmie odpowiedzialność (wysoka Władza/Niezależność), a kto spanikuje bez jasnych procedur (wysoki Porządek).</li>
+				<li><strong>Pomiar Odporności na Ryzyko:</strong> Z góry diagnozujemy, który menedżer będzie unikał trudnych decyzji (wysoka potrzeba Spokoju) i eskalował problemy z powrotem do Ciebie.</li>
+				<li><strong>Mapa Konfliktów:</strong> Przewidujemy i neutralizujemy tarcia w zespole na poziomie projektowania ról.</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="pc-snap-section pc-reveal" aria-label="Metodologia: Protokół 17:00">
+	<div class="pc-snap-inner">
+		<div class="pc-snap-content">
+			<h2 class="pc-h2">Protokół 17:00™: Inżynieria Delegowania w 4 Krokach</h2>
+			<p class="pc-body">
+				Mając twarde dane z RMP, wdrażamy system operacyjny. Oto jak przeprowadzam Twoją firmę do pełnej autonomii:
+			</p>
+
+			<div class="pc-steps">
+				<div class="pc-step">
+					<h3 class="pc-h3">Etap 1: Mapowanie Wąskich Gardeł</h3>
+					<p class="pc-body">Analizujemy strumień operacyjny. Oddzielamy decyzje strategiczne (Twoje) od operacyjnych (do delegowania). Zespół zarządzający przechodzi profilowanie RMP, dając nam mapę blokad decyzyjnych.</p>
+				</div>
+				<div class="pc-step">
+					<h3 class="pc-h3">Etap 2: Projektowanie Architektury Decyzyjnej</h3>
+					<p class="pc-body">Przestajemy zgadywać. Tworzymy Matrycę Uprawnień – przypisujemy klasy decyzji do konkretnych osób na podstawie ich naturalnych predyspozycji i odporności na ryzyko zbadanej w RMP.</p>
+				</div>
+				<div class="pc-step">
+					<h3 class="pc-h3">Etap 3: Instalacja Protokołu 17:00™</h3>
+					<p class="pc-body">Wdrażamy sztywne ramy komunikacji. Zespół uczy się Zasady Gotowych Rozwiązań (przychodzą z rekomendacjami, a nie problemami). Zastępujemy kulturę „ciągłego przeszkadzania” asynchronicznym przepływem informacji. Ty odzyskujesz popołudnia.</p>
+				</div>
+				<div class="pc-step">
+					<h3 class="pc-h3">Etap 4: Kalibracja i Test Odcięcia</h3>
+					<p class="pc-body">System wymaga dotarcia. Monitoruję „Instynkt Decyzyjny” zespołu. Finałem jest celowe wyłączenie Cię z procesów operacyjnych na określony czas, abyśmy mogli udowodnić szczelność wdrożonego systemu.</p>
+				</div>
 			</div>
-			<div>
-				<p class="text-3xl font-extrabold text-slate-900 mb-1">PL / EN</p>
-				<p class="text-sm text-slate-600 mb-0">
-					praca z klientami w Polsce i za granicą
-				</p>
+		</div>
+	</div>
+</section>
+
+<section id="kwalifikacja" class="pc-snap-section pc-snap-section--alt pc-reveal" aria-label="Kwalifikacja">
+	<div class="pc-snap-inner">
+		<div class="pc-snap-content">
+			<h2 class="pc-h2">Dla kogo pracuję?</h2>
+			<p class="pc-body">Moje metody nie są dla każdego. Najlepsze, mierzalne wyniki osiągamy, gdy:</p>
+			<ul class="pc-bullets">
+				<li>Jesteś właścicielem lub CEO firmy zatrudniającej od <strong>[Liczba]</strong> do <strong>[Liczba]</strong> pracowników.</li>
+				<li>Zbudowałeś zyskowny biznes, ale dotarłeś do ściany swoich fizycznych możliwości przerobowych.</li>
+				<li>Jesteś gotowy na zderzenie z twardymi danymi analitycznymi.</li>
+				<li>Chcesz wreszcie pracować <em>nad</em> firmą, a nie <em>w</em> firmie.</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="pc-snap-section pc-reveal" aria-label="FAQ">
+	<div class="pc-snap-inner">
+		<div class="pc-snap-content">
+			<h2 class="pc-h2">Najczęściej zadawane pytania</h2>
+
+			<div class="pc-faq">
+				<details class="pc-faq-item">
+					<summary class="pc-faq-q">Czy Protokół 17:00™ oznacza, że całkowicie tracę kontrolę nad firmą?</summary>
+					<div class="pc-faq-a">
+						<p class="pc-body">Nie. Tracisz konieczność mikrozarządzania operacyjnego. Zyskujesz za to meta-kontrolę. Protokół ustala ścisłe ramy – zespół wie, do jakiego poziomu finansowego lub ryzyka może decydować samodzielnie, a kiedy problem wymaga Twojej strategicznej akceptacji.</p>
+					</div>
+				</details>
+				<details class="pc-faq-item">
+					<summary class="pc-faq-q">Mój zespół jest specyficzny. Czy sztywne ramy RMP zadziałają u nas?</summary>
+					<div class="pc-faq-a">
+						<p class="pc-body">RMP nie jest sztywną ramą – to narzędzie diagnostyczne. Właśnie dlatego, że Twój zespół jest specyficzny, diagnoza RMP wskaże indywidualne wektory motywacyjne. Protokół 17:00™ jest kalibrowany precyzyjnie pod profile Twoich kluczowych ludzi, a nie według sztampowego podręcznika.</p>
+					</div>
+				</details>
+				<details class="pc-faq-item">
+					<summary class="pc-faq-q">Ile trwa pełne wdrożenie systemu?</summary>
+					<div class="pc-faq-a">
+						<p class="pc-body">Standardowy proces transformacji zajmuje od <strong>[Liczba]</strong> do <strong>[Liczba]</strong> tygodni. Nie zamykamy firmy na ten czas. Wdrażamy zmiany operacyjnie, w toku codziennej pracy Twojego biznesu.</p>
+					</div>
+				</details>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="py-16 border-t border-slate-200 bg-slate-50" aria-label="Projekty, przy których pracowałem">
-	<div class="mx-auto max-w-content px-6">
-		<h2 class="text-2xl sm:text-3xl font-bold tracking-[-0.03em] text-slate-900 mb-8">
-			Pracowałem przy projektach, które:
-		</h2>
-
-		<div class="space-y-6">
-			<p class="text-slate-600">
-				<strong class="font-semibold text-slate-900">Wygrywały przetargi i konkursy ofert.</strong>
-				Pomagałem przygotowywać oferty i prezentacje, które wygrywały kontrakty warte dziesiątki milionów złotych.
+<section class="pc-snap-section pc-snap-section--final pc-reveal" aria-label="Finalne CTA">
+	<div class="pc-snap-inner">
+		<div class="pc-snap-content">
+			<h2 class="pc-h2">Gotowy na wdrożenie Protokołu 17:00™?</h2>
+			<p class="pc-lead">
+				Przestań zgadywać i testować cierpliwość swoją oraz swojego zespołu. Zacznij projektować skuteczny proces decyzyjny oparty na twardych danych.
+				Umów się na wstępną konsultację. Sprawdzimy, czy i jak szybko jestem w stanie zlikwidować wąskie gardła w Twojej organizacji.
 			</p>
-			<p class="text-slate-600">
-				<strong class="font-semibold text-slate-900">Przekonywały zarządy i inwestorów.</strong>
-				Doprecyzowywaliśmy historię, liczby i ryzyka tak, by decyzje zapadały szybciej i na lepszych warunkach.
-			</p>
-			<p class="text-slate-600">
-				<strong class="font-semibold text-slate-900">Budowały pozycję eksperta.</strong>
-				Z nieznanych specjalistów robiliśmy rozpoznawalnych liderów opinii w swoich niszach.
-			</p>
-			<p class="text-slate-600 mb-0">
-				<strong class="font-semibold text-slate-900">Uspójniały komunikację wewnętrzną.</strong>
-				Porządkowaliśmy sposób, w jaki zarząd i menedżerowie rozmawiają z zespołami o strategii, zmianach i wynikach.
-			</p>
-		</div>
-	</div>
-</section>
-
-<section class="py-16 border-t border-slate-200" aria-label="Doświadczenie">
-	<div class="mx-auto max-w-content px-6">
-		<h2 class="text-2xl sm:text-3xl font-bold tracking-[-0.03em] text-slate-900 mb-5">
-			Doświadczenie, na którym możesz się oprzeć
-		</h2>
-		<div class="space-y-4 max-w-3xl text-slate-600">
-			<p>
-				Od kilkunastu lat pracuję na styku strategii, komunikacji i sprzedaży. Łączę perspektywę doradcy strategicznego,
-				marketera i osoby, która wielokrotnie musiała „dowieźć” wyniki, a nie tylko przygotować slajdy.
-			</p>
-			<p class="mb-0">
-				Pracowałem zarówno dla dużych organizacji, jak i mniejszych firm, które chciały uporządkować ofertę, wejść na nowy rynek
-				albo przestać gasić pożary i zacząć działać według jasnego planu.
-			</p>
-		</div>
-	</div>
-</section>
-
-<section id="jak-pomagam" class="py-16 border-t border-slate-200 bg-slate-50" aria-label="W czym mogę pomóc">
-	<div class="mx-auto max-w-content px-6">
-		<h2 class="text-2xl sm:text-3xl font-bold tracking-[-0.03em] text-slate-900 mb-5">
-			W czym konkretnie mogę Ci pomóc?
-		</h2>
-		<p class="text-slate-600 mb-8 max-w-2xl">
-			Najczęściej pracuję w trzech obszarach. Wybierz ten, który najlepiej opisuje Twoją sytuację.
-		</p>
-
-		<div class="grid gap-6 md:grid-cols-3">
-			<article class="rounded-xl border border-slate-200 bg-white px-5 py-5 shadow-sm">
-				<h3 class="text-base font-semibold text-slate-900 mb-2">
-					Warsztaty strategiczne i proces dla zarządu
-				</h3>
-				<p class="text-sm text-slate-600 mb-0">
-					Porządkujemy to, gdzie jesteś teraz, dokąd chcesz dojść i jakie decyzje trzeba podjąć po drodze.
-					Kończysz z jasnym planem i materiałami, na których może oprzeć się cała firma.
-				</p>
-			</article>
-			<article class="rounded-xl border border-slate-200 bg-white px-5 py-5 shadow-sm">
-				<h3 class="text-base font-semibold text-slate-900 mb-2">
-					Oferta, która „niesie się” dalej
-				</h3>
-				<p class="text-sm text-slate-600 mb-0">
-					Układamy propozycję wartości, strukturę oferty i sposób mówienia o niej, tak by handlowcy, marketing
-					i zarząd mówili jednym głosem.
-				</p>
-			</article>
-			<article class="rounded-xl border border-slate-200 bg-white px-5 py-5 shadow-sm">
-				<h3 class="text-base font-semibold text-slate-900 mb-2">
-					Kluczowe prezentacje i wystąpienia
-				</h3>
-				<p class="text-sm text-slate-600 mb-0">
-					Przygotowujemy wystąpienia, prezentacje lub spotkania, w których stawka jest wysoka – od rad nadzorczych,
-					przez konferencje, po strategiczne spotkania z klientami.
-				</p>
-			</article>
-		</div>
-	</div>
-</section>
-
-<section id="kontakt" class="py-16 border-t border-slate-200" aria-label="Kontakt">
-	<div class="mx-auto max-w-content px-6">
-		<h2 class="text-2xl sm:text-3xl font-bold tracking-[-0.03em] text-slate-900 mb-5">
-			Zobaczmy, czy możemy razem popracować
-		</h2>
-		<p class="text-slate-600 mb-6 max-w-2xl">
-			Napisz kilka zdań o swojej sytuacji i stawce, jaka stoi za projektem. Odezwę się z propozycją krótkiej rozmowy wstępnej.
-		</p>
-
-		<div class="space-y-2 text-sm text-slate-700">
-			<p class="mb-1">
-				<span class="text-[11px] font-semibold tracking-[0.18em] uppercase text-slate-500">E-mail</span><br>
-				<a href="mailto:kontakt@pawelczaplicki.com" class="text-slate-900 underline underline-offset-2">
-					kontakt@pawelczaplicki.com
-				</a>
-			</p>
-			<p class="text-slate-500 mb-0 text-xs max-w-md">
-				W kolejnym etapie dodamy tu formularz kontaktowy oraz link do kalendarza, żeby umówienie rozmowy było jeszcze prostsze.
-			</p>
+			<div class="pc-cta-row">
+				<a class="pc-btn pc-btn--primary" href="mailto:kontakt@pawelczaplicki.com">Umów niezobowiązującą konsultację biznesową</a>
+			</div>
 		</div>
 	</div>
 </section>
