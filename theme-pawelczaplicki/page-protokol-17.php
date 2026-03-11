@@ -302,7 +302,7 @@ get_header();
 					Odpowiedz na kilka krótkich pytań i sprawdź, na ile Twoja firma jest uzależniona od Twoich decyzji. Test pokaże, ile decyzji
 					przechodzi przez właściciela, czy zespół działa samodzielnie i gdzie powstają największe wąskie gardła.
 				</p>
-				<a href="#" class="inline-flex items-center justify-center rounded-md border border-slate-900 bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800">
+				<a href="<?php echo esc_url( home_url( '/ankieta/' ) ); ?>" class="inline-flex items-center justify-center rounded-md border border-slate-900 bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800">
 					Zrób szybki test — bezpłatnie
 				</a>
 			</div>
