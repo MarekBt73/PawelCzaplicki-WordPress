@@ -11,8 +11,8 @@ declare(strict_types=1);
 </head>
 <body <?php body_class(); ?>>
 
-<?php if ( is_front_page() ) : ?>
-	<!-- Sticky header – Protokół 17:00™ (strona główna) -->
+<?php if ( ! is_page_template( 'page-protokol-17.php' ) ) : ?>
+	<!-- Sticky header – główny layout (jak na stronie głównej) -->
 	<header id="main-header" class="fixed top-0 w-full z-50 transition-all duration-300 py-3 bg-white border-b border-gray-100">
 		<div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center space-x-3">
@@ -84,34 +84,6 @@ declare(strict_types=1);
 				</a>
 			</div>
 		</div>
-	</header>
-<?php else : ?>
-	<!-- Header – pozostałe strony (stary motyw) -->
-		<header class="pc-header pc-container pl-6">
-		<div class="pc-logo">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/logo-2.png' ); ?>" alt="<?php esc_attr_e( 'Czaplicki – logo', 'pawelczaplicki' ); ?>">
-			</a>
-		</div>
-		<button type="button" class="pc-nav-toggle" aria-label="<?php esc_attr_e( 'Przełącz menu', 'pawelczaplicki' ); ?>" aria-expanded="false">
-			<span></span>
-			<span></span>
-		</button>
-		<nav class="pc-nav" aria-label="<?php esc_attr_e( 'Główne menu', 'pawelczaplicki' ); ?>">
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'primary',
-					'container'      => false,
-					'menu_class'     => 'pc-nav-list',
-					'fallback_cb'    => false,
-				)
-			);
-			?>
-			<a class="pc-btn pc-btn--primary pc-header-cta" href="<?php echo esc_url( home_url( '/' ) ); ?>#oferta">
-				Poznaj Protokół 17:00™
-			</a>
-		</nav>
 	</header>
 <?php endif; ?>
 

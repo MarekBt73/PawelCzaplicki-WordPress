@@ -23,7 +23,12 @@ get_header();
 		<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 			<div class="lg:col-span-7">
 				<h1 class="text-4xl md:text-5xl lg:text-[4rem] font-semi-expanded font-bold leading-[1.1] text-brand-red mb-10 tracking-tight">
-					Doradztwo strategiczne dla właścicieli firm: Łączę dane z Reiss Motivation Profile z wdrożeniem Protokołu 17:00™, aby firma działała sprawnie bez ciągłego nadzoru właściciela.
+					Doradztwo strategiczne dla właścicieli firm:<br>
+					Łączę dane z Reiss Motivation Profile z wdrożeniem
+					<a href="<?php echo esc_url( home_url( '/protokol-17-00/' ) ); ?>" class="text-brand-dark">
+						Protokołu 17:00™
+					</a>
+					, aby firma działała sprawnie bez ciągłego nadzoru właściciela.
 				</h1>
 				<p class="text-xl md:text-2xl text-brand-dark font-normal leading-relaxed mb-12 max-w-2xl">
 					Pomagam właścicielom firm przestać być wąskim gardłem swoich biznesów, wykorzystując Reiss Motivation Profile® i wdrażając Protokół 17:00™ – system decyzji i delegowania, dzięki któremu firma działa bez ciągłego nadzoru właściciela.

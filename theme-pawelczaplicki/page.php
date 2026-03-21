@@ -5,7 +5,7 @@ declare(strict_types=1);
 get_header();
 
 ?>
-<section class="pc-container">
+<section class="pc-container pc-main-offset">
 	<?php
 	if ( have_posts() ) :
 		while ( have_posts() ) :

@@ -76,3 +76,110 @@ body.admin-bar #main-header {
 		display: none !important;
 	}
 }
+
+/* Stopka ujednolicona – front page */
+.footer-unified {
+	padding: 4rem 0;
+	background-color: #fafafa;
+	border-top: 1px solid #e5e7eb;
+}
+
+.footer-unified__inner {
+	max-width: 80rem;
+	margin-inline: auto;
+	padding-inline: 1.5rem 3rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+}
+
+.footer-unified__brand {
+	flex-shrink: 0;
+}
+
+.footer-unified__logo {
+	display: block;
+	font-family: 'Mona Sans', sans-serif;
+	font-variation-settings: "wdth" 115;
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: #111111;
+	text-decoration: none;
+	margin-bottom: 0.5rem;
+}
+
+.footer-unified__logo:hover {
+	opacity: 0.85;
+}
+
+.footer-unified__logo-accent {
+	color: #E7411D;
+}
+
+.footer-unified__tagline {
+	font-size: 0.875rem;
+	font-weight: 700;
+	color: #9ca3af;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.footer-unified__nav {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	min-width: 0;
+}
+
+.footer-unified__menu {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem 2rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer-unified__menu a {
+	font-size: 0.875rem;
+	color: #9ca3af;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.footer-unified__menu a:hover {
+	color: #E7411D;
+}
+
+.footer-unified__copy {
+	flex-shrink: 0;
+	font-size: 0.875rem;
+	color: #9ca3af;
+	text-align: right;
+}
+
+.footer-unified__copy-line {
+	margin: 0 0 0.5rem;
+}
+
+.footer-unified__copy-line:last-child {
+	margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+	.footer-unified__inner {
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	.footer-unified__nav {
+		justify-content: flex-start;
+	}
+
+	.footer-unified__copy {
+		text-align: left;
+	}
+}

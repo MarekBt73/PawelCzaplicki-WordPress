@@ -32,8 +32,30 @@ add_action(
 		$theme_version = wp_get_theme()->get( 'Version' );
 		$is_front    = is_front_page();
 
+		$is_contact = is_page_template( 'template-kontakt.php' );
+		$is_archive = is_home() || is_archive();
+		$is_single  = is_single();
+
+		if ( $is_front || $is_contact || $is_archive || $is_single ) {
+			// Strona główna i kontakt: Lucide icons (header CTA, przycisk formularza)
+			wp_enqueue_script(
+				'pawelczaplicki-lucide',
+				'https://unpkg.com/lucide@latest/dist/umd/lucide.js',
+				array(),
+				null,
+				false
+			);
+			if ( $is_contact || $is_archive || $is_single ) {
+				wp_add_inline_script(
+					'pawelczaplicki-lucide',
+					"document.addEventListener('DOMContentLoaded', function() { if (typeof lucide !== 'undefined') lucide.createIcons(); });",
+					'after'
+				);
+			}
+		}
+
 		if ( $is_front ) {
-			// Strona główna: Tailwind CDN + konfiguracja marki, Lucide, własne style
+			// Strona główna: Tailwind CDN + konfiguracja marki, własne style
 			wp_enqueue_style(
 				'pawelczaplicki-google-fonts',
 				'https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wdth,wght@0,75..125,200..900;1,75..125,200..900&display=swap',
@@ -51,13 +73,6 @@ add_action(
 				'pawelczaplicki-tailwind-cdn',
 				"tailwind.config = { theme: { extend: { fontFamily: { sans: ['\"Mona Sans\"', 'sans-serif'] }, colors: { brand: { red: '#E7411D', dark: '#111111', gray: '#f4f4f4', light: '#fafafa' } } } } };",
 				'after'
-			);
-			wp_enqueue_script(
-				'pawelczaplicki-lucide',
-				'https://unpkg.com/lucide@latest/dist/umd/lucide.js',
-				array(),
-				null,
-				false
 			);
 			wp_enqueue_style(
 				'pawelczaplicki-front-page',
@@ -124,6 +139,15 @@ add_filter(
 			$classes[] = 'text-brand-dark';
 			$classes[] = 'bg-white';
 			$classes[] = 'relative';
+		}
+		if ( is_page_template( 'template-kontakt.php' ) ) {
+			$classes[] = 'pc-body-contact';
+		}
+		if ( is_home() || is_archive() ) {
+			$classes[] = 'pc-body-archive';
+		}
+		if ( is_single() ) {
+			$classes[] = 'pc-body-single';
 		}
 		return $classes;
 	}

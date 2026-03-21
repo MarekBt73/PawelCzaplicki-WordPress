@@ -36,7 +36,7 @@ get_header();
 			<a href="<?php echo esc_url( home_url( '/ankieta/' ) ); ?>" class="inline-flex items-center justify-center rounded-md border border-slate-900 bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800">
 				Zrób szybki test — bezpłatnie
 			</a>
-			<a href="#rozmowa" class="inline-flex items-center justify-center rounded-md border border-slate-900 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-900 hover:text-white">
+			<a href="<?php echo esc_url( home_url( '/kontakt/' ) ); ?>" class="inline-flex items-center justify-center rounded-md border border-slate-900 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-900 hover:text-white">
 				Umów rozmowę wstępną
 			</a>
 		</div>
@@ -315,7 +315,7 @@ get_header();
 					Podczas rozmowy przeanalizujemy sposób podejmowania decyzji w Twojej firmie, sprawdzimy gdzie powstają wąskie gardła i pokażę,
 					jak wygląda wdrożenie systemu. Po rozmowie będziesz wiedział, czy to rozwiązanie ma sens w Twojej sytuacji.
 				</p>
-				<a href="#" class="inline-flex items-center justify-center rounded-md border border-slate-900 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-900 hover:text-white">
+				<a href="<?php echo esc_url( home_url( '/kontakt/' ) ); ?>" class="inline-flex items-center justify-center rounded-md border border-slate-900 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-900 hover:text-white">
 					Umów rozmowę wstępną
 				</a>
 			</div>

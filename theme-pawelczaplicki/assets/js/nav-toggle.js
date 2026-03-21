@@ -1,22 +1,29 @@
 (() => {
-  var toggle = document.querySelector(".pc-nav-toggle");
-  var nav = document.querySelector(".pc-nav");
-  if (!toggle || !nav) return;
+  // Mobilne menu w headerze Protokół 17:00™ na podstronach
+  var mobileToggle = document.getElementById("p17-mobile-toggle");
+  var mobileNav = document.querySelector(".p17-nav-mobile");
+  if (!mobileToggle || !mobileNav) return;
 
   function close() {
-    nav.classList.remove("pc-nav--open");
-    document.body.classList.remove("pc-nav-open");
-    toggle.setAttribute("aria-expanded", "false");
+    if (!mobileNav.classList.contains("hidden")) {
+      mobileNav.classList.add("hidden");
+    }
+    mobileToggle.setAttribute("aria-expanded", "false");
   }
 
-  toggle.addEventListener("click", function () {
-    var isOpen = nav.classList.toggle("pc-nav--open");
-    document.body.classList.toggle("pc-nav-open", isOpen);
-    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  mobileToggle.addEventListener("click", function () {
+    var isOpen = !mobileNav.classList.contains("hidden");
+    if (isOpen) {
+      mobileNav.classList.add("hidden");
+      mobileToggle.setAttribute("aria-expanded", "false");
+    } else {
+      mobileNav.classList.remove("hidden");
+      mobileToggle.setAttribute("aria-expanded", "true");
+    }
   });
 
   window.addEventListener("resize", function () {
-    if (window.innerWidth > 900) {
+    if (window.innerWidth >= 768) {
       close();
     }
   });
@@ -27,4 +34,3 @@
     }
   });
 })();
-
